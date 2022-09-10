@@ -45,6 +45,12 @@ form {
   margin-top: 30px;
 }
 
+.units .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
 .description {
   font-size: 14px;
 }

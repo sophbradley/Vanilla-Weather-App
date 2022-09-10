@@ -1,10 +1,10 @@
 function formattedDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
+  let dateTime = new Date(timestamp);
+  let hours = dateTime.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = dateTime.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -18,8 +18,29 @@ function formattedDate(timestamp) {
     "Saturday",
   ];
 
-  let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  let date = dateTime.getDate();
+  if (date < 10) {
+    date = `0${date}`;
+  }
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[dateTime.getMonth()];
+
+  let day = days[dateTime.getDay()];
+  return `${day} ${date} ${month} ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
@@ -35,6 +56,8 @@ function showTemperature(response) {
   let currentWindSpeed = document.querySelector("#wind-speed");
   let cityName = response.data.name;
   let currentCity = document.querySelector("#city");
+
+  celsiusTemp = response.data.main.temp;
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -67,7 +90,32 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("London");
+function displayCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#current-temp");
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 31;
+  let tempElement = document.querySelector("#current-temp");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsiusTemp = null;
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", displayCelsius);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheit);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+search("London");
