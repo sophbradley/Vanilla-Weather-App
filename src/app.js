@@ -33,12 +33,15 @@ function showTemperature(response) {
   let currentHumidity = document.querySelector("#humidity");
   let windSpeed = response.data.wind.speed;
   let currentWindSpeed = document.querySelector("#wind-speed");
+  let cityName = response.data.name;
+  let currentCity = document.querySelector("#city");
 
   currentTemperature.innerHTML = Math.round(temperature);
   currentDescription.innerHTML = `${description}`;
   currentHumidity.innerHTML = Math.round(humidity);
   currentCloudCover.innerHTML = Math.round(clouds);
   currentWindSpeed.innerHTML = Math.round(windSpeed);
+  currentCity.innerHTML = cityName;
 
   let timeUpdated = document.querySelector("#last-update");
   timeUpdated.innerHTML = formattedDate(response.data.dt * 1000);
@@ -47,11 +50,17 @@ function showTemperature(response) {
 function search(city) {
   let apiKey = "b54ec3dabea4bd11fa9edcf4789c4202";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=${units}`;
-
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
-//let searchInput = document.querySelector("#search-form");
-//searchInput.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-input");
+  search(cityInputElement.value);
+}
 
 search("London");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

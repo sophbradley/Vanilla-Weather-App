@@ -4,16 +4,9 @@ footer {
   padding-top: 20px;
 }
 
-.search-form {
+form {
   max-width: 600px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  font-size: 10px;
-  padding-top: 30px;
-}
-
-.submit-btn {
-  padding: 4px 10px;
+  margin: 30px auto;
 }
 
 .weather-data {
@@ -31,6 +24,10 @@ footer {
   padding-top: 20px;
 }
 
+.overview {
+  margin-bottom: 0px;
+}
+
 .temp-units {
   margin-top: 10px;
 }
@@ -38,6 +35,7 @@ footer {
 .current-temp {
   font-size: 48px;
   margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .units {

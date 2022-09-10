@@ -16,23 +16,30 @@
   </head>
   <div class="container">
     <body>
-      <form class="search-form" id="search-form">
+      <form id="search-form">
+        <div class="row ">
+          <div class="col-4">
         <input
           type="text"
           placeholder="search for a city"
           autocomplete="off"
-          id="search-text-input"
+          id="search-input"
+          class="form-control"
         />
-        <input type="submit" value="Search"/>
+        </div>
+        <div class="col-3">
+        <input type="submit" value="Search" class="btn btn-primary"/>
+        </div>  
+      </div>
       </form>
       
       <div class="weather-data">
         <div class="row location">
-          <div class="col 12"><h1 class="city" id="city">London</h1></div>
+          <div class="col 12"><h1 class="city" id="city"></h1></div>
         </div>
         <div class="row">
           <div class="col-4 temp-units">
-            <p>
+            <p class="overview">
               <span class="current-temp" id="current-temp"></span>
               <span class="units">℃ | ℉</span>
               <div class="description" id="description"></div>
@@ -40,7 +47,7 @@
           </div>
 
           <div class="col-4">
-            <div class="weather-icon">🌤</div>
+            <div class="weather-icon" id="icon"></div>
           </div>
 
           <div class="col-4">
