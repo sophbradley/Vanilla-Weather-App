@@ -15,8 +15,38 @@
   </head>
   <div class="container">
     <body>
-      <h1>Hello World</h1>
+      <div class="row location">
+        <div class="col 12"><h1 class="city">London</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-4 temp-units">
+          <p>
+            <span class="current-temp">18</span>
+            <span class="units">℃ | ℉</span>
+          </p>
+        </div>
+
+        <div class="col-4">
+          <div class="weather-icon">🌤</div>
+        </div>
+
+        <div class="col-4">
+          <div class="current-weather-info">
+            <div class="precipitation">Precipitation: 2%</div>
+            <div class="humidity">Humidity: 77%</div>
+            <div class="wind-speed">Wind: 8 mph</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6 last-update">Last Updated: Saturday 11:26</div>
+      </div>
+
       <script src="src/app.js"></script>
     </body>
   </div>
+  <footer>
+    <a src="#" class="footer">Open source code</a> built by Sophie Bradley
+  </footer>
 </html>

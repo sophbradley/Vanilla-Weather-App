@@ -1,0 +1,45 @@
+footer {
+  text-align: center;
+  font-size: 12px;
+}
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #6441e7;
+  border-radius: 30px;
+}
+
+.last-update {
+  text-align: left;
+  font-size: 12px;
+  padding-top: 20px;
+  margin-left: 10px;
+}
+
+.temp-units {
+  margin-top: 10px;
+}
+
+.current-temp {
+  font-size: 48px;
+  margin-top: 30px;
+}
+
+.units {
+  position: relative;
+  top: -22px;
+  bottom: 28px;
+  margin-top: 30px;
+}
+
+.weather-icon {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.current-weather-info {
+  padding: 10px 12px;
+  margin-top: 10px;
+}
