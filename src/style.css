@@ -1,10 +1,24 @@
 footer {
   text-align: center;
   font-size: 12px;
+  padding-top: 20px;
 }
-.container {
+
+.search-form {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 10px;
+  padding-top: 30px;
+}
+
+.submit-btn {
+  padding: 4px 10px;
+}
+
+.weather-data {
+  max-width: 600px;
+  margin: 0px auto;
   text-align: center;
   padding: 20px;
   border: 1px solid #6441e7;
@@ -12,10 +26,9 @@ footer {
 }
 
 .last-update {
-  text-align: left;
+  text-align: center;
   font-size: 12px;
   padding-top: 20px;
-  margin-left: 10px;
 }
 
 .temp-units {
@@ -32,6 +45,10 @@ footer {
   top: -22px;
   bottom: 28px;
   margin-top: 30px;
+}
+
+.description {
+  font-size: 14px;
 }
 
 .weather-icon {
