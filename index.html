@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,7 +22,7 @@
       <div class="row">
         <div class="col-4 temp-units">
           <p>
-            <span class="current-temp">18</span>
+            <span class="current-temp" id="current-temp"></span>
             <span class="units">℃ | ℉</span>
           </p>
         </div>
@@ -32,15 +33,21 @@
 
         <div class="col-4">
           <div class="current-weather-info">
-            <div class="precipitation">Precipitation: 2%</div>
-            <div class="humidity">Humidity: 77%</div>
-            <div class="wind-speed">Wind: 8 mph</div>
+            <div class="clouds">
+              Cloud cover: <span id="cloudiness"></span> %
+            </div>
+            <div class="humidity">Humidity: <span id="humidity"></span> %</div>
+            <div class="wind-speed">
+              Wind: <span id="wind-speed"></span> mph
+            </div>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-6 last-update">Last Updated: Saturday 11:26</div>
+        <div class="col-6 last-update">
+          Last Updated: <span id="last-update"></span>
+        </div>
       </div>
 
       <script src="src/app.js"></script>
