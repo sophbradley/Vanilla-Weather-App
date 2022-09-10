@@ -11,27 +11,31 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <div class="container">
     <body>
-      <form id="search-form">
-        <div class="row ">
-          <div class="col-4">
-        <input
-          type="text"
-          placeholder="search for a city"
-          autocomplete="off"
-          id="search-input"
-          class="form-control"
-        />
+      <div class ="content">
+        <form id="search-form">
+         <div class="row ">
+           <div class="col-4">
+          <input
+            type="text"
+            placeholder="search for a city"
+            autocomplete="off"
+            id="search-input"
+            class="form-control"
+         />
+         </div>
+          <div class="col-3">
+            <input type="submit" value="Search" class="btn btn-primary"/>
+          </div>  
         </div>
-        <div class="col-3">
-        <input type="submit" value="Search" class="btn btn-primary"/>
-        </div>  
-      </div>
-      </form>
+        </form>
       
       <div class="weather-data">
         <div class="row location">
@@ -83,4 +87,6 @@
   <footer>
     <a src="#" class="footer">Open source code</a> built by Sophie Bradley
   </footer>
+  </div>
+</div>
 </html>
