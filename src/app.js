@@ -107,6 +107,22 @@ function displayFahrenheit(event) {
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
+function forecastData() {
+  let forecastDataElement = document.querySelector("#forecast-data");
+  let forecastHTML = `<div class="row justify-content-center forecast-data">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2 "><span class="forecast-day">${day}</span>
+  <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt=""/>
+  <span class="forecast-max">19°</span>|<span class="forecast-min">14°</span>
+</div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastDataElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemp = null;
 
 let celsius = document.querySelector("#celsius");
@@ -119,3 +135,4 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("London");
+forecastData();

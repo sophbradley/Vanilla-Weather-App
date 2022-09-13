@@ -49,6 +49,10 @@ form {
   padding: 0px 10px;
 }
 
+.location {
+  padding-top: 15px;
+}
+
 .last-update {
   text-align: center;
   font-size: 12px;
@@ -98,7 +102,7 @@ form {
 }
 
 .forecast-data {
-  margin-top: 60px;
+  margin: 40px auto;
 }
 
 .forecast-day {
