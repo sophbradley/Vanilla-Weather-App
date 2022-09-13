@@ -96,3 +96,20 @@ form {
   padding: 10px 12px;
   margin-top: 10px;
 }
+
+.forecast-data {
+  margin-top: 60px;
+}
+
+.forecast-day {
+  font-size: 18px;
+}
+
+.forecast-max {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.forecast-min {
+  font-size: 14px;
+}
