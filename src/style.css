@@ -9,7 +9,7 @@ body {
 footer {
   text-align: center;
   font-size: 14px;
-  padding-top: 20px;
+  margin-top: -5px;
   color: #fff;
 }
 
@@ -27,7 +27,7 @@ form {
   font-weight: bold;
 }
 .content {
-  margin: 120px 190px;
+  margin: 90px 190px;
   padding-bottom: 20px;
   background: rgba(255, 255, 255, 0.336);
   border-radius: 16px;
