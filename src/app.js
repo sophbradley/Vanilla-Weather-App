@@ -65,9 +65,7 @@ function displayForecast(response) {
      <img src="http://openweathermap.org/img/wn/${
        forecastDay.weather[0].icon
      }@2x.png" alt="${forecastDay.weather[0].description}/>
-  <span class="forecast-max">${Math.round(
-    forecastDay.temp.max
-  )}°</span>|<span class="forecast-min">${Math.round(
+  <span class="forecast-temp">${Math.round(forecastDay.temp.max)}°|${Math.round(
           forecastDay.temp.min
         )}°</span>
 </div>`;
@@ -94,7 +92,7 @@ function showTemperature(response) {
   let currentCloudCover = document.querySelector("#cloudiness");
   let humidity = response.data.main.humidity;
   let currentHumidity = document.querySelector("#humidity");
-  let windSpeed = response.data.wind.speed;
+  let windSpeed = response.data.wind.speed * 2.237;
   let currentWindSpeed = document.querySelector("#wind-speed");
   let cityName = response.data.name;
   let currentCity = document.querySelector("#city");
@@ -133,31 +131,6 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#search-input");
   search(cityInputElement.value);
 }
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#current-temp");
-  celsius.classList.add("active");
-  fahrenheit.classList.remove("active");
-  tempElement.innerHTML = Math.round(celsiusTemp);
-}
-
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 31;
-  let tempElement = document.querySelector("#current-temp");
-  celsius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
-let celsiusTemp = null;
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", displayCelsius);
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", displayFahrenheit);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);

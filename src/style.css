@@ -8,7 +8,7 @@ body {
 
 footer {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   padding-top: 20px;
   color: #fff;
 }
@@ -21,7 +21,6 @@ form {
 .footer {
   color: #fff;
 }
-
 .footer:hover {
   cursor: pointer;
   color: #fff;
@@ -30,7 +29,7 @@ form {
 .content {
   margin: 120px 190px;
   padding-bottom: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.336);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -55,7 +54,7 @@ form {
 
 .last-update {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   padding-top: 20px;
   margin-top: 30px;
 }
@@ -82,14 +81,8 @@ form {
   color: #fff;
 }
 
-.units .active {
-  color: #fff;
-  cursor: default;
-  text-decoration: none;
-}
-
 .description {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .weather-icon {
@@ -109,11 +102,7 @@ form {
   font-size: 18px;
 }
 
-.forecast-max {
+.forecast-temp {
   font-size: 14px;
   font-weight: bold;
-}
-
-.forecast-min {
-  font-size: 14px;
 }
